@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marist Networking Course - File Upload Form</title>
+</head>
+<body>
+    <h1>Welcome to the Marist Networking Course!</h1>
+    <p>This is a file upload form for the course. Please use it to submit various types of files.</p>
+
+    <h2>Upload Form</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <!-- Image upload -->
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" accept="image/*"><br><br>
+
+        <!-- Text upload -->
+        <label for="text">Upload Text:</label>
+        <input type="file" name="text" accept=".txt"><br><br>
+
+        <!-- Video upload -->
+        <label for="video">Upload Video:</label>
+        <input type="file" name="video" accept="video/*"><br><br>
+
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
