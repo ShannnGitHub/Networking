@@ -32,8 +32,8 @@ def upload():
                 return f'{file_type} file size exceeds the limit'
 
             # Save the file to a secure location (modify the path as needed)
-            file.save(os.path.join('/path/to/uploaded/files/', file.filename))
-            print(f'{file_type.capitalize()} File Name:', file.filename)
+            file.save(os.path.join('https://github.com/ShannnGitHub/Networking_lab_download.git', file.file))
+            print(f'{file_type.capitalize()} File Name:', file.file)
 
     return 'Files uploaded successfully!'
 
