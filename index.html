@@ -10,44 +10,20 @@
     <p>This is a file upload form for the course. Please use it to submit various types of files.</p>
 
     <h2>Upload Form</h2>
-    <form action="https://enigmatic-anchorage-79689.herokuapp.com/upload" method="post" enctype="multipart/form-data">
-        <label for="file">Select File (Accepted types: .txt, .png, .mp4):</label>
-        <input type="file" name="file" accept=".txt, .png, .mp4"><br><br>
-
+    <form name="contact" netlify>
         <!-- Image upload -->
         <label for="image">Upload Image:</label>
-        <input type="file" id="image" name="image" accept="image/*">
-        <span id="imageFileName"></span><br><br>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
 
         <!-- Text upload -->
         <label for="text">Upload Text:</label>
-        <input type="file" id="text" name="text" accept=".txt">
-        <span id="textFileName"></span><br><br>
+        <input type="file" id="text" name="text" accept=".txt"><br><br>
 
         <!-- Video upload -->
         <label for="video">Upload Video:</label>
-        <input type="file" id="video" name="video" accept="video/*">
-        <span id="videoFileName"></span><br><br>
+        <input type="file" id="video" name="video" accept="video/*"><br><br>
 
         <input type="submit" value="Upload">
     </form>
-
-    <!-- JavaScript to display selected file names -->
-    <script>
-        // Function to update the displayed file name
-        function updateFileName(inputId, fileNameId) {
-            const input = document.getElementById(inputId);
-            const fileNameSpan = document.getElementById(fileNameId);
-
-            input.addEventListener('change', function() {
-                fileNameSpan.textContent = input.files[0] ? input.files[0].name : '';
-            });
-        }
-
-        // Update file names for each input
-        updateFileName('image', 'imageFileName');
-        updateFileName('text', 'textFileName');
-        updateFileName('video', 'videoFileName');
-    </script>
 </body>
 </html>
